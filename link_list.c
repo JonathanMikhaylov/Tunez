@@ -108,7 +108,7 @@ song_node * rand_element(song_node * head) {
 
 
 //REMOVE -done
-song_node * remove(song_node * front, char []songName) {
+song_node * remove(song_node * front, char [] songName) {
   if(!*front){
     return NULL;
   }else if(!strncmp(songName,front -> name,256)){

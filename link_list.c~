@@ -93,9 +93,17 @@ song_node * find_artist(song_node * head, char[] songArtist) {
 }
 
 
-//RANDOM ELEMENT
+//RANDOM ELEMENT -done
 song_node * rand_element(song_node * head) {
-  // use random number % (length of 
+  struct song_node * ret = head;
+  int randNum = rand(time(null)) % len(tmp);
+  
+  while(randNum) {
+    ret = ret -> next;
+    randNum--;
+  }
+  return ret;
+  
 }
 
 
@@ -110,7 +118,7 @@ song_node * remove(song_node * front, char []songName) {
   }
   else{
     song_node prev = front;
-    song_node current = front->next;
+    song_node current = front -> next;
 
     while(*current){
       if(!strncmp(current -> name,songName)){

@@ -16,7 +16,7 @@ void add_song(song_node * arr[], char songNames[], char songArtists[]) {
   int place = find_place(front_letter);
 
   printf("Adding %s by %s\n", songNames, songArtists);
-  arr[place] = insert_order(table[place], songNames, songArtists);
+  arr[place] = insert_song(table[place], songNames, songArtists);
 }
 
 //SEARCH SONG
